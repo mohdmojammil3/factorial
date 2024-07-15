@@ -1,1 +1,1 @@
-# factorial web app
+# Factorial web app
