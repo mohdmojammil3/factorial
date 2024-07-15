@@ -1,12 +1,12 @@
-# app.py
+# application.py
 
 from flask import Flask, render_template, request
 from src.factorial import Factorial  # Import the Factorial class from src.factorial
 # from folder.file import class name
 
-app = Flask(__name__)
+application = Flask(__name__)
 
-@app.route('/', methods=['GET', 'POST'])
+@application.route('/', methods=['GET', 'POST'])
 def index():
     result = None
     if request.method == 'POST':
@@ -19,4 +19,4 @@ def index():
     return render_template('index.html', result=result)
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=8080)
+    application.run(debug=False, host='0.0.0.0', port=8080)
